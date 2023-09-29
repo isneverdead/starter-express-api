@@ -14,6 +14,8 @@ app.all('/', async (req, res) => {
         const html = await response.text()
         console.log("/api/scrap : cherio load")
         const $ = cheerio.load(html);
+        console.log(html)
+        console.log($(html).find(".product-tile"))
     
         const shoeTitle = [];
         console.log("/api/scrap : data processing");
